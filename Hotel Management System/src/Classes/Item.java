@@ -7,9 +7,29 @@ public class Item {
     private int catID;
     private int supID;
     private int quantity;
+    private int Remainquant;
     private int price;
     private int total;
     private int reStockLvl;
+    private String status;
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    
+    
+    public int getRemainquant() {
+        return Remainquant;
+    }
+
+    public void setRemainquant(int Remainquant) {
+        this.Remainquant = Remainquant;
+    }
 
     public int getID() {
         return ID;
