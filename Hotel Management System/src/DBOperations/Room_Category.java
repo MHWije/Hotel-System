@@ -85,4 +85,71 @@ public class Room_Category {
         return status;
     }
     
+    
+    //Retrieve Category Names
+    public ResultSet Room_CategoryNameList()
+    {
+        try {
+            String str="SELECT name FROM `room_category` WHERE isActive=1";
+            ps=conn.prepareStatement(str);
+            rs=ps.executeQuery();
+        } catch (Exception e) {
+            System.err.println(e);
+        }
+        return rs;
+    }
+    
+    //Retrieve ID for Category
+    public int RetrieveCategoryID(String name){
+        int id = 0;
+        try {
+            String str="SELECT idRoom_Category FROM `room_category` WHERE name='"+name+"'";
+            ps=conn.prepareStatement(str);
+            rs=ps.executeQuery();
+            while(rs.next()){
+                id = rs.getInt("idRoom_Category");
+            }
+        } catch (Exception e) {
+            System.err.println(e);
+        }
+        return id;
+    }
+    
+    
+    //Retrieve Category Name for given ID
+    public String Room_CategoryName(int id)
+    {
+        String name=null;
+        try {
+            String str="SELECT name FROM `room_category` WHERE isActive=1 AND idRoom_Category='"+id+"'";
+            ps=conn.prepareStatement(str);
+            rs=ps.executeQuery();
+            
+            while(rs.next()){
+                name = rs.getString("name");
+            }
+            
+        } catch (Exception e) {
+            System.err.println(e);
+        }
+        return name;
+    }
+    
+    //Retrieve price for given id
+    public double RetrieveCategoryPricePerHead(int id){
+        double price = 0;
+        try {
+            String str="SELECT pricePerHead FROM `room_category` WHERE idRoom_Category='"+id+"'";
+            ps=conn.prepareStatement(str);
+            rs=ps.executeQuery();
+            while(rs.next()){
+                price = rs.getDouble("pricePerHead");
+            }
+        } catch (Exception e) {
+            System.err.println(e);
+        }
+        return price;
+    }
+    
+    
 }//end of class
