@@ -5,6 +5,7 @@
  */
 package Interfaces;
 
+import Classes.ItemCategory;
 import DBOperations.DBAccess;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
@@ -158,8 +159,12 @@ public class CategoryJFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
+    
+        ItemCategory itemOb=new ItemCategory();
+        itemOb.setName(txtName.getText());
+        itemOb.setLocation(txtLocat.getText());
         try {
-            if (ob.addCategory(txtName.getText(),txtLocat.getText())) {
+            if ( ob.addCategory(itemOb) ) {
                      JOptionPane.showMessageDialog(null,"Successfuly added","Alert", JOptionPane.INFORMATION_MESSAGE);
                      tableLoad();
             }
@@ -179,10 +184,13 @@ public class CategoryJFrame extends javax.swing.JFrame {
     private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
          
         int x=JOptionPane.showConfirmDialog(null, "Do you really want to update?");
-        
+        ItemCategory itemOb=new ItemCategory();
+        itemOb.setCatID(id);
+        itemOb.setName(txtName.getText());
+        itemOb.setLocation(txtLocat.getText());
         if(x==0)
         {
-            if(ob.updateCategory(id, txtName.getText(),txtLocat.getText()))
+            if(ob.updateCategory(itemOb))
             {
                 JOptionPane.showMessageDialog(null,"Successfuly updated","Alert",JOptionPane.INFORMATION_MESSAGE);
                 tableLoad();
