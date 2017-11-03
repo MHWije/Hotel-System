@@ -9,17 +9,17 @@ package Classes;
  *
  * @author mhWiJe
  */
-public class Room_Category {
+public class Room_CategoryModel {
     //Room Category properties
     private int id;
     private String name;
     private double pricePerHead;
     private boolean isActive;
 
-    public Room_Category() {
+    public Room_CategoryModel() {
     }
 
-    public Room_Category(int id, String name, double pricePerHead, boolean isActive) {
+    public Room_CategoryModel(int id, String name, double pricePerHead, boolean isActive) {
         this.id = id;
         this.name = name;
         this.pricePerHead = pricePerHead;

@@ -9,15 +9,15 @@ package Classes;
  *
  * @author mhWiJe
  */
-public class Room_Service {
+public class Room_ServiceModel {
     //Room_Service properties
     private int id,roomID,menuID;
     private String status,date;
 
-    public Room_Service() {
+    public Room_ServiceModel() {
     }
 
-    public Room_Service(int id, int roomID, int menuID, String status, String date) {
+    public Room_ServiceModel(int id, int roomID, int menuID, String status, String date) {
         this.id = id;
         this.roomID = roomID;
         this.menuID = menuID;

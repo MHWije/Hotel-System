@@ -9,16 +9,16 @@ package Classes;
  *
  * @author mhWiJe
  */
-public class Reservation {
+public class ReservationModel {
     //Reservation properties
     private int id,guestID,roomID,headCount;
     private String checkIN,checkOut;
     private double cost;
 
-    public Reservation() {
+    public ReservationModel() {
     }
 
-    public Reservation(int id, int guestID, int roomID, int headCount, String checkIN, String checkOut, double cost) {
+    public ReservationModel(int id, int guestID, int roomID, int headCount, String checkIN, String checkOut, double cost) {
         this.id = id;
         this.guestID = guestID;
         this.roomID = roomID;

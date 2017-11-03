@@ -9,17 +9,17 @@ package Classes;
  *
  * @author mhWiJe
  */
-public class Room {
+public class RoomModel {
     //Room properties
     private int id,category,NoOfBeds;
     private String name;
     private double price;
     private boolean isActive,isAvailable;
 
-    public Room() {
+    public RoomModel() {
     }
 
-    public Room(int id, int category, int NoOfBeds, String name, double price, boolean isActive, boolean isAvailable) {
+    public RoomModel(int id, int category, int NoOfBeds, String name, double price, boolean isActive, boolean isAvailable) {
         this.id = id;
         this.category = category;
         this.NoOfBeds = NoOfBeds;

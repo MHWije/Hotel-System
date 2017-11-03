@@ -9,15 +9,15 @@ package Classes;
  *
  * @author mhWiJe
  */
-public class Guest {
+public class GuestModel {
     //guest properties
     private int id;
     private String name,NIC,TP,email,address;
 
-    public Guest() {
+    public GuestModel() {
     }
 
-    public Guest(int id, String name, String NIC, String TP, String email, String address) {
+    public GuestModel(int id, String name, String NIC, String TP, String email, String address) {
         this.id = id;
         this.name = name;
         this.NIC = NIC;
