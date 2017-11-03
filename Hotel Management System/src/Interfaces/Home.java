@@ -35,8 +35,6 @@ public class Home extends javax.swing.JFrame {
         GuestBTN = new javax.swing.JLabel();
         ReservationBTN = new javax.swing.JLabel();
         ReservationBTN1 = new javax.swing.JLabel();
-        BackgroundLayer = new javax.swing.JLayeredPane();
-        Background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Hotel Management System");
@@ -161,33 +159,7 @@ public class Home extends javax.swing.JFrame {
                 .addGroup(ButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(RestaurantBTN)
                     .addComponent(GuestBTN))
-                .addContainerGap(157, Short.MAX_VALUE))
-        );
-
-        BackgroundLayer.setPreferredSize(new java.awt.Dimension(1100, 600));
-
-        Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/Background.png"))); // NOI18N
-        Background.setMaximumSize(new java.awt.Dimension(1100, 600));
-        Background.setMinimumSize(new java.awt.Dimension(1100, 600));
-        Background.setPreferredSize(new java.awt.Dimension(1100, 600));
-
-        BackgroundLayer.setLayer(Background, javax.swing.JLayeredPane.DEFAULT_LAYER);
-
-        javax.swing.GroupLayout BackgroundLayerLayout = new javax.swing.GroupLayout(BackgroundLayer);
-        BackgroundLayer.setLayout(BackgroundLayerLayout);
-        BackgroundLayerLayout.setHorizontalGroup(
-            BackgroundLayerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1236, Short.MAX_VALUE)
-            .addGroup(BackgroundLayerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(BackgroundLayerLayout.createSequentialGroup()
-                    .addComponent(Background, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        BackgroundLayerLayout.setVerticalGroup(
-            BackgroundLayerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 746, Short.MAX_VALUE)
-            .addGroup(BackgroundLayerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(Background, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(29, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -197,9 +169,7 @@ public class Home extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(Buttons, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(BackgroundLayer, javax.swing.GroupLayout.DEFAULT_SIZE, 1236, Short.MAX_VALUE))
+                .addContainerGap(52, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -207,12 +177,9 @@ public class Home extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(Buttons)
                 .addContainerGap())
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(BackgroundLayer, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 746, Short.MAX_VALUE))
         );
 
         Buttons.getAccessibleContext().setAccessibleDescription("");
-        Buttons.getAccessibleContext().setAccessibleParent(Background);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -253,8 +220,6 @@ public class Home extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel Background;
-    private javax.swing.JLayeredPane BackgroundLayer;
     private javax.swing.JLayeredPane Buttons;
     private javax.swing.JLabel EmployeeBTN;
     private javax.swing.JLabel GuestBTN;
