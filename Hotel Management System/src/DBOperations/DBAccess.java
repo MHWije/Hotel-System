@@ -1,6 +1,7 @@
  
-package Connection;
+package DBOperations;
 
+import Connection.Connection2;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

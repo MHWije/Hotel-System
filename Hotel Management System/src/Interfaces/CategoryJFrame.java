@@ -5,7 +5,7 @@
  */
 package Interfaces;
 
-import Connection.DBAccess;
+import DBOperations.DBAccess;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 import net.proteanit.sql.DbUtils;

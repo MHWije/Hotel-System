@@ -5,7 +5,7 @@
  */
 package Interfaces;
 
-import Connection.DBAccess;
+import DBOperations.DBAccess;
 import javax.swing.JOptionPane;
 import net.proteanit.sql.DbUtils;
 
@@ -48,6 +48,11 @@ public class NewItem2JFrame extends javax.swing.JFrame {
             for (int i = 0; i < manufactArr.length; i++) {
             cmbManufact.addItem(manufactArr[i]);
         } 
+            if(!(cmbManufact.getSelectedItem()=="Select one"))
+            {
+                cmbSupplierLoad();
+                  JOptionPane.showMessageDialog(null,"Error ","Alert",JOptionPane.INFORMATION_MESSAGE);
+            }
     }
      
        public void cmbSupplierLoad()
@@ -89,7 +94,7 @@ public class NewItem2JFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(0, 51, 51));
+        jPanel1.setBackground(new java.awt.Color(102, 102, 102));
 
         txtName.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         txtName.setName("txtName"); // NOI18N
@@ -127,6 +132,11 @@ public class NewItem2JFrame extends javax.swing.JFrame {
         cmbManufact.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         cmbManufact.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select one" }));
         cmbManufact.setToolTipText("");
+        cmbManufact.addHierarchyListener(new java.awt.event.HierarchyListener() {
+            public void hierarchyChanged(java.awt.event.HierarchyEvent evt) {
+                cmbManufactHierarchyChanged(evt);
+            }
+        });
         cmbManufact.addPopupMenuListener(new javax.swing.event.PopupMenuListener() {
             public void popupMenuCanceled(javax.swing.event.PopupMenuEvent evt) {
                 cmbManufactPopupMenuCanceled(evt);
@@ -139,6 +149,11 @@ public class NewItem2JFrame extends javax.swing.JFrame {
         cmbManufact.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
             public void propertyChange(java.beans.PropertyChangeEvent evt) {
                 cmbManufactPropertyChange(evt);
+            }
+        });
+        cmbManufact.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                cmbManufactKeyPressed(evt);
             }
         });
 
@@ -432,8 +447,16 @@ public class NewItem2JFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_cmbManufactPropertyChange
 
     private void cmbManufactPopupMenuCanceled(javax.swing.event.PopupMenuEvent evt) {//GEN-FIRST:event_cmbManufactPopupMenuCanceled
-       JOptionPane.showMessageDialog(null,"Error ","Alert",JOptionPane.INFORMATION_MESSAGE);
+       
     }//GEN-LAST:event_cmbManufactPopupMenuCanceled
+
+    private void cmbManufactKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cmbManufactKeyPressed
+       
+    }//GEN-LAST:event_cmbManufactKeyPressed
+
+    private void cmbManufactHierarchyChanged(java.awt.event.HierarchyEvent evt) {//GEN-FIRST:event_cmbManufactHierarchyChanged
+        
+    }//GEN-LAST:event_cmbManufactHierarchyChanged
 
     /**
      * @param args the command line arguments
