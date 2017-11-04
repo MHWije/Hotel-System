@@ -16,7 +16,7 @@ import net.proteanit.sql.DbUtils;
 
 /**
  *
- * @author HarshaKoshila
+ * @author mhWiJe
  */
 public class RoomUI extends javax.swing.JFrame {
 

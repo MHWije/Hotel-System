@@ -13,7 +13,7 @@ import net.proteanit.sql.DbUtils;
 
 /**
  *
- * @author HarshaKoshila
+ * @author mhWije
  */
 public class RoomCategoryUI extends javax.swing.JFrame {
 

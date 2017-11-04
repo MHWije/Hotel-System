@@ -14,7 +14,7 @@ import net.proteanit.sql.DbUtils;
 
 /**
  *
- * @author HarshaKoshila
+ * @author mhWiJe
  */
 public class GuestUI extends javax.swing.JFrame {
 

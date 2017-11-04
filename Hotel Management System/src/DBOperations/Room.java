@@ -40,6 +40,19 @@ public class Room {
         return rs;
     }
     
+    //retrieve room table records
+    public ResultSet AvailableRoomRecords()
+    {
+        try {
+            String str="SELECT * FROM `room` WHERE isActive=1 AND isAvailable=1";
+            ps=conn.prepareStatement(str);
+            rs=ps.executeQuery();
+        } catch (Exception e) {
+            System.err.println(e);
+        }
+        return rs;
+    }
+    
     
     //Add Room details 
     public boolean addRoom(RoomModel R){
@@ -81,6 +94,60 @@ public class Room {
             ps.execute();
             status = true;
         } catch (SQLException e) {
+            System.err.println(e);
+        }
+        return status;
+    }
+    
+    
+    //Retrieve Name for given id
+    public String RoomName(int id)
+    {
+        String name=null;
+        try {
+            String str="SELECT roomName FROM `room` WHERE idRoom='"+id+"'";
+            ps=conn.prepareStatement(str);
+            rs=ps.executeQuery();
+            
+            while(rs.next()){
+                name = rs.getString("roomName");
+            }
+            
+        } catch (Exception e) {
+            System.err.println(e);
+        }
+        return name;
+    }
+    
+    //get room price
+    public Double RoomPrice(int id)
+    {
+        Double name=null;
+        try {
+            String str="SELECT price FROM `room` WHERE idRoom='"+id+"'";
+            ps=conn.prepareStatement(str);
+            rs=ps.executeQuery();
+            
+            while(rs.next()){
+                name = rs.getDouble("price");
+            }
+            
+        } catch (Exception e) {
+            System.err.println(e);
+        }
+        return name;
+    }
+    
+    //set availability of room when reserving
+    public boolean RoomAvailability(int id)
+    {
+        boolean status=false;
+        try {
+            String str="Update `room` set isAvailable=0 WHERE idRoom='"+id+"'";
+            ps=conn.prepareStatement(str);
+            ps.execute();
+            status=true;
+        } catch (Exception e) {
             System.err.println(e);
         }
         return status;
