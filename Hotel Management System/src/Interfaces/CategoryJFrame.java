@@ -23,6 +23,8 @@ public class CategoryJFrame extends javax.swing.JFrame {
     public CategoryJFrame() {
         initComponents();
         tableLoad();
+        btnUpdate.setVisible(false);
+        btnDelete.setVisible(false);
     }
  
     public void tableLoad()
@@ -43,19 +45,20 @@ public class CategoryJFrame extends javax.swing.JFrame {
         btnUpdate = new javax.swing.JButton();
         btnRest = new javax.swing.JButton();
         btnSubmit = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
         btnDelete = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         txtLocat = new javax.swing.JTextField();
+        btnHome = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel1.setText("Name");
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel1.setText("Add new category");
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(20, 80, 60, 30);
+        jLabel1.setBounds(20, 20, 250, 30);
 
         tblCat.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -77,7 +80,7 @@ public class CategoryJFrame extends javax.swing.JFrame {
         jScrollPane1.setViewportView(tblCat);
 
         jPanel1.add(jScrollPane1);
-        jScrollPane1.setBounds(350, 30, 400, 240);
+        jScrollPane1.setBounds(350, 90, 400, 240);
 
         txtName.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         txtName.setName("txtName"); // NOI18N
@@ -93,13 +96,13 @@ public class CategoryJFrame extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnUpdate);
-        btnUpdate.setBounds(70, 230, 100, 30);
+        btnUpdate.setBounds(80, 220, 100, 30);
 
         btnRest.setBackground(new java.awt.Color(51, 51, 51));
         btnRest.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         btnRest.setText("Reset");
         jPanel1.add(btnRest);
-        btnRest.setBounds(60, 170, 100, 30);
+        btnRest.setBounds(80, 170, 100, 30);
 
         btnSubmit.setBackground(new java.awt.Color(51, 51, 51));
         btnSubmit.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -112,11 +115,6 @@ public class CategoryJFrame extends javax.swing.JFrame {
         jPanel1.add(btnSubmit);
         btnSubmit.setBounds(190, 170, 100, 30);
 
-        jLabel2.setText("jLabel2");
-        jLabel2.setName("jtblCateg"); // NOI18N
-        jPanel1.add(jLabel2);
-        jLabel2.setBounds(20, -20, 30, 50);
-
         btnDelete.setBackground(new java.awt.Color(51, 51, 51));
         btnDelete.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         btnDelete.setText("Delete");
@@ -126,7 +124,7 @@ public class CategoryJFrame extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnDelete);
-        btnDelete.setBounds(190, 230, 100, 30);
+        btnDelete.setBounds(190, 220, 100, 30);
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel3.setText("Store Location");
@@ -138,21 +136,32 @@ public class CategoryJFrame extends javax.swing.JFrame {
         jPanel1.add(txtLocat);
         txtLocat.setBounds(120, 120, 180, 30);
 
+        btnHome.setBackground(new java.awt.Color(0, 153, 153));
+        btnHome.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        btnHome.setForeground(new java.awt.Color(255, 255, 255));
+        btnHome.setText("Home");
+        btnHome.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnHomeActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnHome);
+        btnHome.setBounds(690, 10, 85, 31);
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel2.setText("Name");
+        jPanel1.add(jLabel2);
+        jLabel2.setBounds(20, 80, 60, 30);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 776, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 796, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 368, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 390, Short.MAX_VALUE)
         );
 
         pack();
@@ -218,6 +227,13 @@ public class CategoryJFrame extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnDeleteActionPerformed
 
+    private void btnHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHomeActionPerformed
+
+        InventoryJFrame newFrame = new InventoryJFrame();
+        newFrame.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnHomeActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -255,6 +271,7 @@ public class CategoryJFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnDelete;
+    private javax.swing.JButton btnHome;
     private javax.swing.JButton btnRest;
     private javax.swing.JButton btnSubmit;
     private javax.swing.JButton btnUpdate;

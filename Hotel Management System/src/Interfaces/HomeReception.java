@@ -27,21 +27,172 @@ public class HomeReception extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        ReservationBTN = new javax.swing.JLabel();
+        GuestBTN = new javax.swing.JLabel();
+        GuestBTN1 = new javax.swing.JLabel();
+        RestaurantBTN = new javax.swing.JLabel();
+        InventoryBTN = new javax.swing.JLabel();
+        EmployeeBTN = new javax.swing.JLabel();
+        ReservationBTN1 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Receptionist Home ");
+        setLocation(new java.awt.Point(150, 50));
+
+        jPanel1.setBackground(new java.awt.Color(0, 102, 102));
+
+        ReservationBTN.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        ReservationBTN.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ReservationBTN.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/RoomIcon.png"))); // NOI18N
+        ReservationBTN.setToolTipText("Rooms and Lodges");
+        ReservationBTN.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        ReservationBTN.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        ReservationBTN.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+
+        GuestBTN.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        GuestBTN.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        GuestBTN.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/GuestIcon.png"))); // NOI18N
+        GuestBTN.setToolTipText("Rooms and Lodges");
+        GuestBTN.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        GuestBTN.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        GuestBTN.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+
+        GuestBTN1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        GuestBTN1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        GuestBTN1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/SupplierIcon.png"))); // NOI18N
+        GuestBTN1.setToolTipText("Rooms and Lodges");
+        GuestBTN1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        GuestBTN1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        GuestBTN1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+
+        RestaurantBTN.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        RestaurantBTN.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        RestaurantBTN.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/RestaurantIcon.png"))); // NOI18N
+        RestaurantBTN.setToolTipText("Rooms and Lodges");
+        RestaurantBTN.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        RestaurantBTN.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        RestaurantBTN.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+
+        InventoryBTN.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        InventoryBTN.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        InventoryBTN.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/InventoryIcon.png"))); // NOI18N
+        InventoryBTN.setToolTipText("Rooms and Lodges");
+        InventoryBTN.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        InventoryBTN.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        InventoryBTN.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+
+        EmployeeBTN.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        EmployeeBTN.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        EmployeeBTN.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/EmployeeIcon.png"))); // NOI18N
+        EmployeeBTN.setToolTipText("Rooms and Lodges");
+        EmployeeBTN.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        EmployeeBTN.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        EmployeeBTN.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+
+        ReservationBTN1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        ReservationBTN1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ReservationBTN1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/ReservationAndPayment.png"))); // NOI18N
+        ReservationBTN1.setToolTipText("Rooms and Lodges");
+        ReservationBTN1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        ReservationBTN1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        ReservationBTN1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+
+        jButton1.setBackground(new java.awt.Color(0, 153, 153));
+        jButton1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("Logout");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ReservationBTN1)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(EmployeeBTN)))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(RestaurantBTN)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(GuestBTN1)
+                        .addGap(22, 22, 22)
+                        .addComponent(GuestBTN))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(43, 43, 43)
+                        .addComponent(InventoryBTN)
+                        .addGap(106, 106, 106)
+                        .addComponent(ReservationBTN)
+                        .addGap(43, 43, 43)
+                        .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 131, Short.MAX_VALUE)))
+                .addGap(20, 20, 20))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(99, 99, 99)
+                        .addComponent(EmployeeBTN)
+                        .addGap(35, 35, 35)
+                        .addComponent(ReservationBTN1))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(ReservationBTN)
+                                .addGap(27, 27, 27))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGap(90, 90, 90)
+                                        .addComponent(InventoryBTN))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGap(26, 26, 26)
+                                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(12, 12, 12)))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(86, 86, 86)
+                                .addComponent(RestaurantBTN))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(54, 54, 54)
+                                .addComponent(GuestBTN))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(GuestBTN1)))))
+                .addContainerGap(57, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+
+        LoginJFrame newFrame = new LoginJFrame();
+        newFrame.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -80,5 +231,16 @@ public class HomeReception extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel EmployeeBTN;
+    private javax.swing.JLabel GuestBTN;
+    private javax.swing.JLabel GuestBTN1;
+    private javax.swing.JLabel InventoryBTN;
+    private javax.swing.JLabel ReservationBTN;
+    private javax.swing.JLabel ReservationBTN1;
+    private javax.swing.JLabel RestaurantBTN;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

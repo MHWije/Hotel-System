@@ -35,6 +35,7 @@ public class HomeAdmin extends javax.swing.JFrame {
         ReservationBTN1 = new javax.swing.JLabel();
         RestaurantBTN = new javax.swing.JLabel();
         GuestBTN = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Admin Home");
@@ -57,6 +58,11 @@ public class HomeAdmin extends javax.swing.JFrame {
         InventoryBTN.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         InventoryBTN.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         InventoryBTN.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        InventoryBTN.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                InventoryBTNMouseClicked(evt);
+            }
+        });
 
         ReservationBTN.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         ReservationBTN.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -98,6 +104,16 @@ public class HomeAdmin extends javax.swing.JFrame {
         GuestBTN.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         GuestBTN.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
+        jButton1.setBackground(new java.awt.Color(0, 153, 153));
+        jButton1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("Logout");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -116,33 +132,40 @@ public class HomeAdmin extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(GuestBTN1)
                         .addGap(22, 22, 22)
-                        .addComponent(GuestBTN))
+                        .addComponent(GuestBTN)
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(43, 43, 43)
                         .addComponent(InventoryBTN)
                         .addGap(106, 106, 106)
-                        .addComponent(ReservationBTN)))
-                .addContainerGap(74, Short.MAX_VALUE))
+                        .addComponent(ReservationBTN)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 131, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(45, 45, 45)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(54, 54, 54)
+                        .addGap(99, 99, 99)
                         .addComponent(EmployeeBTN)
                         .addGap(35, 35, 35)
                         .addComponent(ReservationBTN1))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(45, 45, 45)
-                                .addComponent(InventoryBTN)
-                                .addGap(12, 12, 12))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                 .addComponent(ReservationBTN)
-                                .addGap(27, 27, 27)))
+                                .addGap(27, 27, 27))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGap(90, 90, 90)
+                                        .addComponent(InventoryBTN))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGap(20, 20, 20)
+                                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(12, 12, 12)))
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(86, 86, 86)
@@ -169,6 +192,19 @@ public class HomeAdmin extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        
+        LoginJFrame newFrame = new LoginJFrame();
+        newFrame.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void InventoryBTNMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_InventoryBTNMouseClicked
+        InventoryJFrame newFrame = new InventoryJFrame();
+        newFrame.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_InventoryBTNMouseClicked
 
     /**
      * @param args the command line arguments
@@ -213,6 +249,7 @@ public class HomeAdmin extends javax.swing.JFrame {
     private javax.swing.JLabel ReservationBTN;
     private javax.swing.JLabel ReservationBTN1;
     private javax.swing.JLabel RestaurantBTN;
+    private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
