@@ -82,6 +82,7 @@ public class ReservationUI extends javax.swing.JFrame {
         tableRooms = new javax.swing.JTable();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        btnClose = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setSize(new java.awt.Dimension(1100, 600));
@@ -116,7 +117,7 @@ public class ReservationUI extends javax.swing.JFrame {
         jScrollPane1.setViewportView(tableGuests);
 
         jPanel1.add(jScrollPane1);
-        jScrollPane1.setBounds(460, 50, 570, 190);
+        jScrollPane1.setBounds(460, 50, 570, 170);
 
         jPanel2.setBackground(new java.awt.Color(153, 153, 153));
 
@@ -260,11 +261,11 @@ public class ReservationUI extends javax.swing.JFrame {
                     .addComponent(btnAdd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(56, 56, 56)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(89, Short.MAX_VALUE))
+                .addContainerGap(39, Short.MAX_VALUE))
         );
 
         jPanel1.add(jPanel2);
-        jPanel2.setBounds(10, 30, 420, 450);
+        jPanel2.setBounds(10, 30, 420, 400);
 
         tableRooms.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -293,7 +294,7 @@ public class ReservationUI extends javax.swing.JFrame {
         jScrollPane3.setViewportView(tableRooms);
 
         jPanel1.add(jScrollPane3);
-        jScrollPane3.setBounds(460, 280, 570, 200);
+        jScrollPane3.setBounds(460, 280, 570, 150);
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel2.setText("Room Details");
@@ -304,6 +305,21 @@ public class ReservationUI extends javax.swing.JFrame {
         jLabel3.setText("Guest Details");
         jPanel1.add(jLabel3);
         jLabel3.setBounds(460, 30, 80, 20);
+
+        btnClose.setBackground(new java.awt.Color(51, 51, 51));
+        btnClose.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btnClose.setText("Close");
+        btnClose.setMargin(null);
+        btnClose.setMaximumSize(new java.awt.Dimension(100, 30));
+        btnClose.setMinimumSize(new java.awt.Dimension(100, 30));
+        btnClose.setPreferredSize(new java.awt.Dimension(100, 30));
+        btnClose.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCloseActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnClose);
+        btnClose.setBounds(930, 470, 100, 30);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -382,6 +398,12 @@ public class ReservationUI extends javax.swing.JFrame {
         txtReservationRoomNumber.setText(tableRooms.getValueAt(selectedRow,1).toString());
     }//GEN-LAST:event_tableRoomsMouseClicked
 
+    private void btnCloseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCloseActionPerformed
+        ReservationListUI RLUI = new ReservationListUI();
+        RLUI.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btnCloseActionPerformed
+
     
     
     /**
@@ -454,6 +476,7 @@ public class ReservationUI extends javax.swing.JFrame {
     private org.jdesktop.swingx.JXDatePicker DateReservationCheckIn;
     private org.jdesktop.swingx.JXDatePicker DateReservationCheckOut;
     private javax.swing.JButton btnAdd;
+    private javax.swing.JButton btnClose;
     private javax.swing.JButton btnReset;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

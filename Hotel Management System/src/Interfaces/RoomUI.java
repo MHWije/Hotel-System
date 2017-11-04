@@ -105,6 +105,7 @@ public class RoomUI extends javax.swing.JFrame {
         txtRoomPrice = new javax.swing.JTextField();
         ListRoomCategory = new javax.swing.JComboBox<>();
         ListRoomNoOfBeds = new javax.swing.JComboBox<>();
+        btnClose = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setSize(new java.awt.Dimension(1100, 600));
@@ -139,7 +140,7 @@ public class RoomUI extends javax.swing.JFrame {
         jScrollPane1.setViewportView(tableRoom);
 
         jPanel1.add(jScrollPane1);
-        jScrollPane1.setBounds(490, 30, 530, 340);
+        jScrollPane1.setBounds(490, 30, 540, 340);
 
         jPanel2.setBackground(new java.awt.Color(153, 153, 153));
 
@@ -337,11 +338,26 @@ public class RoomUI extends javax.swing.JFrame {
                     .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(139, Short.MAX_VALUE))
+                .addContainerGap(29, Short.MAX_VALUE))
         );
 
         jPanel1.add(jPanel2);
-        jPanel2.setBounds(30, 30, 420, 450);
+        jPanel2.setBounds(30, 30, 420, 340);
+
+        btnClose.setBackground(new java.awt.Color(51, 51, 51));
+        btnClose.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btnClose.setText("Close");
+        btnClose.setMargin(null);
+        btnClose.setMaximumSize(new java.awt.Dimension(100, 30));
+        btnClose.setMinimumSize(new java.awt.Dimension(100, 30));
+        btnClose.setPreferredSize(new java.awt.Dimension(100, 30));
+        btnClose.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCloseActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnClose);
+        btnClose.setBounds(930, 470, 100, 30);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -488,6 +504,10 @@ public class RoomUI extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_ListRoomCategoryItemStateChanged
 
+    private void btnCloseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCloseActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnCloseActionPerformed
+
     
     
     /**
@@ -536,6 +556,7 @@ public class RoomUI extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> ListRoomCategory;
     private javax.swing.JComboBox<String> ListRoomNoOfBeds;
     private javax.swing.JButton btnAdd;
+    private javax.swing.JButton btnClose;
     private javax.swing.JButton btnDelete;
     private javax.swing.JButton btnReset;
     private javax.swing.JButton btnUpdate;

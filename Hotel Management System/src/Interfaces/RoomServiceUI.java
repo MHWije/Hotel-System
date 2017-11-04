@@ -75,6 +75,7 @@ public class RoomServiceUI extends javax.swing.JFrame {
         tableMenus = new javax.swing.JTable();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        btnClose = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setSize(new java.awt.Dimension(1100, 600));
@@ -109,7 +110,7 @@ public class RoomServiceUI extends javax.swing.JFrame {
         jScrollPane1.setViewportView(tableRooms);
 
         jPanel1.add(jScrollPane1);
-        jScrollPane1.setBounds(460, 50, 570, 190);
+        jScrollPane1.setBounds(460, 50, 570, 180);
 
         jPanel2.setBackground(new java.awt.Color(153, 153, 153));
 
@@ -258,7 +259,7 @@ public class RoomServiceUI extends javax.swing.JFrame {
         jScrollPane3.setViewportView(tableMenus);
 
         jPanel1.add(jScrollPane3);
-        jScrollPane3.setBounds(460, 280, 570, 200);
+        jScrollPane3.setBounds(460, 280, 570, 170);
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel2.setText("Menu Details");
@@ -269,6 +270,21 @@ public class RoomServiceUI extends javax.swing.JFrame {
         jLabel3.setText("Guest Details");
         jPanel1.add(jLabel3);
         jLabel3.setBounds(460, 30, 80, 20);
+
+        btnClose.setBackground(new java.awt.Color(51, 51, 51));
+        btnClose.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btnClose.setText("Close");
+        btnClose.setMargin(null);
+        btnClose.setMaximumSize(new java.awt.Dimension(100, 30));
+        btnClose.setMinimumSize(new java.awt.Dimension(100, 30));
+        btnClose.setPreferredSize(new java.awt.Dimension(100, 30));
+        btnClose.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCloseActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnClose);
+        btnClose.setBounds(930, 470, 100, 30);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -332,6 +348,12 @@ public class RoomServiceUI extends javax.swing.JFrame {
     private void txtRoomServiceMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtRoomServiceMenuActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtRoomServiceMenuActionPerformed
+
+    private void btnCloseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCloseActionPerformed
+        RoomServiceListUI RSUI = new RoomServiceListUI();
+        RSUI.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btnCloseActionPerformed
 
     
     
@@ -436,6 +458,7 @@ public class RoomServiceUI extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private org.jdesktop.swingx.JXDatePicker DateRoomServiceDate;
     private javax.swing.JButton btnAdd;
+    private javax.swing.JButton btnClose;
     private javax.swing.JButton btnReset;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
