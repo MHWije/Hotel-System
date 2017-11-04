@@ -6,13 +6,7 @@
 package Interfaces;
  
 import Classes.Item;
-import DBOperations.DBAccess;
-import com.lowagie.text.Document;
-import com.lowagie.text.PageSize;
-import com.lowagie.text.Paragraph;
-import com.lowagie.text.pdf.PdfContentByte;
-import com.lowagie.text.pdf.PdfPTable;
-import com.lowagie.text.pdf.PdfWriter;
+import DBOperations.DBAccess; 
  
 import java.awt.BorderLayout;
 import java.awt.Graphics2D;
@@ -22,6 +16,7 @@ import java.util.Date;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTable;
+import javax.swing.text.Document;
 import net.proteanit.sql.DbUtils;
 
 /**

@@ -101,6 +101,11 @@ public class CategoryJFrame extends javax.swing.JFrame {
         btnRest.setBackground(new java.awt.Color(51, 51, 51));
         btnRest.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         btnRest.setText("Reset");
+        btnRest.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRestActionPerformed(evt);
+            }
+        });
         jPanel1.add(btnRest);
         btnRest.setBounds(80, 170, 100, 30);
 
@@ -188,6 +193,9 @@ public class CategoryJFrame extends javax.swing.JFrame {
         id=Integer.parseInt(tblCat.getValueAt(r,0).toString());
         txtName.setText(tblCat.getValueAt(r,1).toString());
         txtLocat.setText(tblCat.getValueAt(r,2).toString());
+        btnUpdate.setVisible(true);
+        btnDelete.setVisible(true);
+        btnSubmit.setVisible(false);
     }//GEN-LAST:event_tblCatMouseClicked
 
     private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
@@ -233,6 +241,12 @@ public class CategoryJFrame extends javax.swing.JFrame {
         newFrame.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnHomeActionPerformed
+
+    private void btnRestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRestActionPerformed
+        btnUpdate.setVisible(false);
+        btnDelete.setVisible(false);
+        btnSubmit.setVisible(true);
+    }//GEN-LAST:event_btnRestActionPerformed
 
     /**
      * @param args the command line arguments
