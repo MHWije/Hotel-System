@@ -40,9 +40,10 @@ public class Home extends javax.swing.JFrame {
         setTitle("Hotel Management System");
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setLocation(new java.awt.Point(150, 75));
-        setPreferredSize(new java.awt.Dimension(1100, 600));
         setResizable(false);
         setSize(new java.awt.Dimension(1100, 600));
+
+        Buttons.setBackground(new java.awt.Color(51, 51, 51));
 
         RestaurantBTN.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         RestaurantBTN.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
