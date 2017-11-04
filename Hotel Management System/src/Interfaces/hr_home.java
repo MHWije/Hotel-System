@@ -52,13 +52,15 @@ public class hr_home extends javax.swing.JFrame {
         btn_action_veiwAll = new javax.swing.JButton();
         jLabel19 = new javax.swing.JLabel();
         maincomponentPane = new javax.swing.JDesktopPane();
-        viewAll = new javax.swing.JPanel();
-        txt_searchEmp = new javax.swing.JTextField();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        tbl_search = new javax.swing.JTable();
-        btn_searchEmp = new javax.swing.JButton();
-        btn_update = new javax.swing.JButton();
-        btn_delete = new javax.swing.JButton();
+        login = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        txt_username = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        btn_login = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        btn_register = new javax.swing.JButton();
+        txt_password = new javax.swing.JPasswordField();
         register = new javax.swing.JPanel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         tab_userDetails = new javax.swing.JPanel();
@@ -95,17 +97,16 @@ public class hr_home extends javax.swing.JFrame {
         txt_newPassword = new javax.swing.JPasswordField();
         txt_newConfirmPassword = new javax.swing.JPasswordField();
         jButton1 = new javax.swing.JButton();
-        login = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        txt_username = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        btn_login = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
-        btn_register = new javax.swing.JButton();
-        txt_password = new javax.swing.JPasswordField();
+        viewAll = new javax.swing.JPanel();
+        txt_searchEmp = new javax.swing.JTextField();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        tbl_search = new javax.swing.JTable();
+        btn_searchEmp = new javax.swing.JButton();
+        btn_update = new javax.swing.JButton();
+        btn_delete = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(1200, 720));
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowActivated(java.awt.event.WindowEvent evt) {
                 formWindowActivated(evt);
@@ -113,8 +114,9 @@ public class hr_home extends javax.swing.JFrame {
         });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        index.setPreferredSize(new java.awt.Dimension(700, 600));
+        index.setPreferredSize(new java.awt.Dimension(900, 700));
 
+        btn_action_login.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         btn_action_login.setText("login");
         btn_action_login.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -122,6 +124,7 @@ public class hr_home extends javax.swing.JFrame {
             }
         });
 
+        btn_action_register.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         btn_action_register.setText("Register");
         btn_action_register.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -129,6 +132,7 @@ public class hr_home extends javax.swing.JFrame {
             }
         });
 
+        btn_action_veiwAll.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         btn_action_veiwAll.setText("Search Employee");
         btn_action_veiwAll.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -141,23 +145,23 @@ public class hr_home extends javax.swing.JFrame {
         menuPanelLayout.setHorizontalGroup(
             menuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(menuPanelLayout.createSequentialGroup()
-                .addGap(24, 24, 24)
+                .addGap(26, 26, 26)
                 .addGroup(menuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btn_action_register, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btn_action_veiwAll, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btn_action_login, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btn_action_veiwAll, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(29, Short.MAX_VALUE))
+                    .addComponent(btn_action_register, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(31, Short.MAX_VALUE))
         );
         menuPanelLayout.setVerticalGroup(
             menuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(menuPanelLayout.createSequentialGroup()
-                .addGap(173, 173, 173)
+                .addGap(76, 76, 76)
                 .addComponent(btn_action_login, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
-                .addComponent(btn_action_register, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(btn_action_veiwAll, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(245, Short.MAX_VALUE))
+                .addComponent(btn_action_register, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(36, 36, 36)
+                .addComponent(btn_action_veiwAll, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(234, Short.MAX_VALUE))
         );
 
         jLabel19.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
@@ -166,62 +170,105 @@ public class hr_home extends javax.swing.JFrame {
         maincomponentPane.setPreferredSize(new java.awt.Dimension(700, 622));
         maincomponentPane.setLayout(new java.awt.CardLayout());
 
-        viewAll.setPreferredSize(new java.awt.Dimension(700, 600));
-        viewAll.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        login.setPreferredSize(new java.awt.Dimension(600, 500));
 
-        txt_searchEmp.setToolTipText("");
-        txt_searchEmp.addActionListener(new java.awt.event.ActionListener() {
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel1.setText("User name:");
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel2.setText("Password:");
+
+        txt_username.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_searchEmpActionPerformed(evt);
+                txt_usernameActionPerformed(evt);
             }
         });
-        viewAll.add(txt_searchEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 160, -1));
 
-        tbl_search.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
-            },
-            new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4", "Edit", "Delete"
-            }
-        ));
-        tbl_search.setColumnSelectionAllowed(true);
-        tbl_search.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                tbl_searchMouseClicked(evt);
-            }
-        });
-        jScrollPane2.setViewportView(tbl_search);
-        tbl_search.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel3.setText("Login");
 
-        viewAll.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, 410, 170));
-
-        btn_searchEmp.setText("Search");
-        viewAll.add(btn_searchEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 110, -1, -1));
-
-        btn_update.setText("Update");
-        btn_update.addActionListener(new java.awt.event.ActionListener() {
+        btn_login.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btn_login.setText("Login");
+        btn_login.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_updateActionPerformed(evt);
+                btn_loginActionPerformed(evt);
             }
         });
-        viewAll.add(btn_update, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 340, -1, -1));
 
-        btn_delete.setText("Delete");
-        viewAll.add(btn_delete, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 340, -1, -1));
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel4.setText("Not registerd ?");
 
-        maincomponentPane.add(viewAll, "card5");
+        btn_register.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btn_register.setText("Register");
+        btn_register.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_registerActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout loginLayout = new javax.swing.GroupLayout(login);
+        login.setLayout(loginLayout);
+        loginLayout.setHorizontalGroup(
+            loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(loginLayout.createSequentialGroup()
+                .addGap(158, 158, 158)
+                .addGroup(loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 274, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(loginLayout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addGroup(loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(loginLayout.createSequentialGroup()
+                                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(72, 72, 72))
+                                .addGroup(loginLayout.createSequentialGroup()
+                                    .addComponent(jLabel2)
+                                    .addGroup(loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(loginLayout.createSequentialGroup()
+                                            .addGap(50, 50, 50)
+                                            .addComponent(btn_login, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, loginLayout.createSequentialGroup()
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(txt_username, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                            .addGroup(loginLayout.createSequentialGroup()
+                                .addComponent(jLabel1)
+                                .addGap(45, 45, 45)
+                                .addComponent(txt_password, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(btn_register, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(191, Short.MAX_VALUE))
+        );
+        loginLayout.setVerticalGroup(
+            loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(loginLayout.createSequentialGroup()
+                .addGap(45, 45, 45)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(42, 42, 42)
+                .addGroup(loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(loginLayout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jLabel1))
+                    .addComponent(txt_password, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(33, 33, 33)
+                .addGroup(loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(txt_username, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(29, 29, 29)
+                .addComponent(btn_login, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(11, 11, 11)
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btn_register, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(375, Short.MAX_VALUE))
+        );
+
+        maincomponentPane.add(login, "card2");
 
         register.setPreferredSize(new java.awt.Dimension(600, 500));
-        register.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jTabbedPane1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jTabbedPane1.setPreferredSize(new java.awt.Dimension(700, 600));
+        jTabbedPane1.setPreferredSize(new java.awt.Dimension(800, 700));
+
+        tab_userDetails.setPreferredSize(new java.awt.Dimension(700, 600));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel6.setText("Register User");
@@ -297,7 +344,7 @@ public class hr_home extends javax.swing.JFrame {
                                                 .addComponent(txt_fname, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addGap(18, 18, 18)
                                                 .addComponent(txt_lname, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                        .addGap(0, 14, Short.MAX_VALUE))
+                                        .addGap(0, 0, Short.MAX_VALUE))
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tab_userDetailsLayout.createSequentialGroup()
                                         .addComponent(txt_email, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))))
@@ -342,22 +389,22 @@ public class hr_home extends javax.swing.JFrame {
                     .addComponent(jLabel12))
                 .addGap(18, 18, 18)
                 .addComponent(btn_next)
-                .addGap(0, 151, Short.MAX_VALUE))
+                .addGap(0, 51, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("User Details", tab_userDetails);
 
         jLabel11.setText("Department");
 
-        cmb_dept.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cmb_dept.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "HR management", "Room", "Finance", "Inventory", "Food", " " }));
 
         jLabel14.setText("Supervisor");
 
-        cmb_supervisor.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cmb_supervisor.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "1", "2", "3", "4" }));
 
         jLabel15.setText("Designation");
 
-        cmb_desgnation.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cmb_desgnation.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Cashier", "Admin", "Staff", "mannager", "Assistent- Mannager", " " }));
 
         btn_next_2.setText("Next>>");
         btn_next_2.addActionListener(new java.awt.event.ActionListener() {
@@ -482,47 +529,82 @@ public class hr_home extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("User Accounts", tab_userAccounts);
 
-        register.add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 490, 680));
+        javax.swing.GroupLayout registerLayout = new javax.swing.GroupLayout(register);
+        register.setLayout(registerLayout);
+        registerLayout.setHorizontalGroup(
+            registerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(registerLayout.createSequentialGroup()
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 516, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 184, Short.MAX_VALUE))
+        );
+        registerLayout.setVerticalGroup(
+            registerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(registerLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 580, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(195, Short.MAX_VALUE))
+        );
 
         maincomponentPane.add(register, "card4");
 
-        login.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        login.setPreferredSize(new java.awt.Dimension(700, 600));
-        login.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        viewAll.setPreferredSize(new java.awt.Dimension(600, 500));
+        viewAll.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setText("User name:");
-        login.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, -1, -1));
-
-        jLabel2.setText("Password:");
-        login.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, -1, -1));
-
-        txt_username.addActionListener(new java.awt.event.ActionListener() {
+        txt_searchEmp.setToolTipText("");
+        txt_searchEmp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_usernameActionPerformed(evt);
+                txt_searchEmpActionPerformed(evt);
             }
         });
-        login.add(txt_username, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 190, 190, 40));
+        viewAll.add(txt_searchEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 160, -1));
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel3.setText("Login");
-        login.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 274, 38));
-
-        btn_login.setText("Login");
-        btn_login.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_loginActionPerformed(evt);
+        tbl_search.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4", "Edit", "Delete"
+            }
+        ));
+        tbl_search.setColumnSelectionAllowed(true);
+        tbl_search.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tbl_searchMouseClicked(evt);
             }
         });
-        login.add(btn_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 280, 118, 37));
+        jScrollPane2.setViewportView(tbl_search);
+        tbl_search.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
 
-        jLabel4.setText("Not registerd ?");
-        login.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 350, 120, 40));
+        viewAll.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, 410, 170));
 
-        btn_register.setText("Register");
-        login.add(btn_register, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 350, 118, 37));
-        login.add(txt_password, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 120, 192, 41));
+        btn_searchEmp.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btn_searchEmp.setText("Search");
+        btn_searchEmp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_searchEmpActionPerformed(evt);
+            }
+        });
+        viewAll.add(btn_searchEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 100, -1, 30));
 
-        maincomponentPane.add(login, "card2");
+        btn_update.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btn_update.setText("Update");
+        btn_update.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_updateActionPerformed(evt);
+            }
+        });
+        viewAll.add(btn_update, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 330, -1, -1));
+
+        btn_delete.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btn_delete.setText("Delete");
+        viewAll.add(btn_delete, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 330, -1, -1));
+
+        maincomponentPane.add(viewAll, "card5");
 
         javax.swing.GroupLayout indexLayout = new javax.swing.GroupLayout(index);
         index.setLayout(indexLayout);
@@ -575,6 +657,8 @@ public class hr_home extends javax.swing.JFrame {
             boolean status=hr.login(username,password);
             if(status){
                 JOptionPane.showMessageDialog(null, "Sucessfully logged in","Successfull",  JOptionPane.INFORMATION_MESSAGE);
+            }else{
+                JOptionPane.showMessageDialog(null, "Inalid User","Alert",  JOptionPane.ERROR_MESSAGE);
             }
     }//GEN-LAST:event_btn_loginActionPerformed
 
@@ -756,7 +840,28 @@ public class hr_home extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null,"Error ","Alert",JOptionPane.ERROR_MESSAGE);
             }
         }
+        this.setVisible(true);
+        menuPanel.setVisible(true);
+        register.setVisible(false);
+        login.setVisible(false);
+        viewAll.setVisible(true);
     }//GEN-LAST:event_btn_updateActionPerformed
+
+    private void btn_registerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_registerActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(true);
+        menuPanel.setVisible(true);
+        register.setVisible(true);
+        login.setVisible(false);
+        viewAll.setVisible(false);
+        
+    }//GEN-LAST:event_btn_registerActionPerformed
+
+    private void btn_searchEmpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_searchEmpActionPerformed
+        // TODO add your handling code here:
+        
+        tableLoad();
+    }//GEN-LAST:event_btn_searchEmpActionPerformed
 
     /**
      * @param args the command line arguments
