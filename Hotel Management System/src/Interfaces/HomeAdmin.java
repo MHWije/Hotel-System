@@ -30,9 +30,9 @@ public class HomeAdmin extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         EmployeeBTN = new javax.swing.JLabel();
         InventoryBTN = new javax.swing.JLabel();
-        ReservationBTN = new javax.swing.JLabel();
+        RoomsBTN = new javax.swing.JLabel();
         GuestBTN1 = new javax.swing.JLabel();
-        ReservationBTN1 = new javax.swing.JLabel();
+        ReservationBTN = new javax.swing.JLabel();
         RestaurantBTN = new javax.swing.JLabel();
         GuestBTN = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
@@ -64,13 +64,18 @@ public class HomeAdmin extends javax.swing.JFrame {
             }
         });
 
-        ReservationBTN.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        ReservationBTN.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ReservationBTN.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/RoomIcon.png"))); // NOI18N
-        ReservationBTN.setToolTipText("Rooms and Lodges");
-        ReservationBTN.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        ReservationBTN.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        ReservationBTN.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        RoomsBTN.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        RoomsBTN.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        RoomsBTN.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/RoomIcon.png"))); // NOI18N
+        RoomsBTN.setToolTipText("Rooms and Lodges");
+        RoomsBTN.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        RoomsBTN.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        RoomsBTN.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        RoomsBTN.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                RoomsBTNMouseClicked(evt);
+            }
+        });
 
         GuestBTN1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         GuestBTN1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -80,13 +85,13 @@ public class HomeAdmin extends javax.swing.JFrame {
         GuestBTN1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         GuestBTN1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
-        ReservationBTN1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        ReservationBTN1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ReservationBTN1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/ReservationAndPayment.png"))); // NOI18N
-        ReservationBTN1.setToolTipText("Rooms and Lodges");
-        ReservationBTN1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        ReservationBTN1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        ReservationBTN1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        ReservationBTN.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        ReservationBTN.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ReservationBTN.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/ReservationAndPayment.png"))); // NOI18N
+        ReservationBTN.setToolTipText("Rooms and Lodges");
+        ReservationBTN.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        ReservationBTN.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        ReservationBTN.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
         RestaurantBTN.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         RestaurantBTN.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -103,6 +108,11 @@ public class HomeAdmin extends javax.swing.JFrame {
         GuestBTN.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         GuestBTN.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         GuestBTN.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        GuestBTN.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                GuestBTNMouseClicked(evt);
+            }
+        });
 
         jButton1.setBackground(new java.awt.Color(0, 153, 153));
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -121,7 +131,7 @@ public class HomeAdmin extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(29, 29, 29)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(ReservationBTN1)
+                    .addComponent(ReservationBTN)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addComponent(EmployeeBTN)))
@@ -138,7 +148,7 @@ public class HomeAdmin extends javax.swing.JFrame {
                         .addGap(43, 43, 43)
                         .addComponent(InventoryBTN)
                         .addGap(106, 106, 106)
-                        .addComponent(ReservationBTN)
+                        .addComponent(RoomsBTN)
                         .addGap(18, 18, 18)
                         .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 131, Short.MAX_VALUE)))
                 .addContainerGap())
@@ -151,11 +161,11 @@ public class HomeAdmin extends javax.swing.JFrame {
                         .addGap(99, 99, 99)
                         .addComponent(EmployeeBTN)
                         .addGap(35, 35, 35)
-                        .addComponent(ReservationBTN1))
+                        .addComponent(ReservationBTN))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(ReservationBTN)
+                                .addComponent(RoomsBTN)
                                 .addGap(27, 27, 27))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -173,9 +183,7 @@ public class HomeAdmin extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(54, 54, 54)
                                 .addComponent(GuestBTN))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(GuestBTN1)))))
+                            .addComponent(GuestBTN1))))
                 .addContainerGap(79, Short.MAX_VALUE))
         );
 
@@ -205,6 +213,16 @@ public class HomeAdmin extends javax.swing.JFrame {
         newFrame.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_InventoryBTNMouseClicked
+
+    private void GuestBTNMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_GuestBTNMouseClicked
+        GuestUI GUI = new GuestUI();
+        GUI.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_GuestBTNMouseClicked
+
+    private void RoomsBTNMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RoomsBTNMouseClicked
+        
+    }//GEN-LAST:event_RoomsBTNMouseClicked
 
     /**
      * @param args the command line arguments
@@ -247,8 +265,8 @@ public class HomeAdmin extends javax.swing.JFrame {
     private javax.swing.JLabel GuestBTN1;
     private javax.swing.JLabel InventoryBTN;
     private javax.swing.JLabel ReservationBTN;
-    private javax.swing.JLabel ReservationBTN1;
     private javax.swing.JLabel RestaurantBTN;
+    private javax.swing.JLabel RoomsBTN;
     private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables

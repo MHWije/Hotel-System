@@ -50,7 +50,7 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="ReservationBTN1" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="ReservationBTN" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                           <Component id="EmployeeBTN" min="-2" max="-2" attributes="0"/>
@@ -70,7 +70,7 @@
                           <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
                           <Component id="InventoryBTN" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="106" max="-2" attributes="0"/>
-                          <Component id="ReservationBTN" min="-2" max="-2" attributes="0"/>
+                          <Component id="RoomsBTN" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="jButton1" pref="131" max="32767" attributes="0"/>
                       </Group>
@@ -87,12 +87,12 @@
                           <EmptySpace min="-2" pref="99" max="-2" attributes="0"/>
                           <Component id="EmployeeBTN" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
-                          <Component id="ReservationBTN1" min="-2" max="-2" attributes="0"/>
+                          <Component id="ReservationBTN" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <Component id="ReservationBTN" min="-2" max="-2" attributes="0"/>
+                                  <Component id="RoomsBTN" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
@@ -118,10 +118,7 @@
                                   <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
                                   <Component id="GuestBTN" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="GuestBTN1" min="-2" max="-2" attributes="0"/>
-                              </Group>
+                              <Component id="GuestBTN1" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -164,7 +161,7 @@
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="InventoryBTNMouseClicked"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="ReservationBTN">
+        <Component class="javax.swing.JLabel" name="RoomsBTN">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Arial" size="14" style="1"/>
@@ -178,6 +175,9 @@
             <Property name="horizontalTextPosition" type="int" value="0"/>
             <Property name="verticalTextPosition" type="int" value="3"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="RoomsBTNMouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="GuestBTN1">
           <Properties>
@@ -194,7 +194,7 @@
             <Property name="verticalTextPosition" type="int" value="3"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="ReservationBTN1">
+        <Component class="javax.swing.JLabel" name="ReservationBTN">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Arial" size="14" style="1"/>
@@ -238,6 +238,9 @@
             <Property name="horizontalTextPosition" type="int" value="0"/>
             <Property name="verticalTextPosition" type="int" value="3"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="GuestBTNMouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButton1">
           <Properties>
