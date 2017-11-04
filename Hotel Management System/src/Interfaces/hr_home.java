@@ -50,19 +50,8 @@ public class hr_home extends javax.swing.JFrame {
         btn_action_login = new javax.swing.JButton();
         btn_action_register = new javax.swing.JButton();
         btn_action_veiwAll = new javax.swing.JButton();
-        btn_action_register2 = new javax.swing.JButton();
-        btn_action_register3 = new javax.swing.JButton();
         jLabel19 = new javax.swing.JLabel();
         maincomponentPane = new javax.swing.JDesktopPane();
-        login = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        txt_username = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        btn_login = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
-        btn_register = new javax.swing.JButton();
-        txt_password = new javax.swing.JPasswordField();
         viewAll = new javax.swing.JPanel();
         txt_searchEmp = new javax.swing.JTextField();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -106,6 +95,15 @@ public class hr_home extends javax.swing.JFrame {
         txt_newPassword = new javax.swing.JPasswordField();
         txt_newConfirmPassword = new javax.swing.JPasswordField();
         jButton1 = new javax.swing.JButton();
+        login = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        txt_username = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        btn_login = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        btn_register = new javax.swing.JButton();
+        txt_password = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -138,38 +136,28 @@ public class hr_home extends javax.swing.JFrame {
             }
         });
 
-        btn_action_register2.setText("Register");
-
-        btn_action_register3.setText("Register");
-
         javax.swing.GroupLayout menuPanelLayout = new javax.swing.GroupLayout(menuPanel);
         menuPanel.setLayout(menuPanelLayout);
         menuPanelLayout.setHorizontalGroup(
             menuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, menuPanelLayout.createSequentialGroup()
-                .addContainerGap(32, Short.MAX_VALUE)
+            .addGroup(menuPanelLayout.createSequentialGroup()
+                .addGap(24, 24, 24)
                 .addGroup(menuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btn_action_register, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btn_action_login, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btn_action_veiwAll, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btn_action_register2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btn_action_register3, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(21, 21, 21))
+                    .addComponent(btn_action_veiwAll, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(29, Short.MAX_VALUE))
         );
         menuPanelLayout.setVerticalGroup(
             menuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(menuPanelLayout.createSequentialGroup()
-                .addGap(44, 44, 44)
+                .addGap(173, 173, 173)
                 .addComponent(btn_action_login, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
                 .addComponent(btn_action_register, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
                 .addComponent(btn_action_veiwAll, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(btn_action_register2, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(btn_action_register3, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(222, Short.MAX_VALUE))
+                .addContainerGap(245, Short.MAX_VALUE))
         );
 
         jLabel19.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
@@ -177,44 +165,6 @@ public class hr_home extends javax.swing.JFrame {
 
         maincomponentPane.setPreferredSize(new java.awt.Dimension(700, 622));
         maincomponentPane.setLayout(new java.awt.CardLayout());
-
-        login.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        login.setPreferredSize(new java.awt.Dimension(700, 600));
-        login.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel1.setText("User name:");
-        login.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, -1, -1));
-
-        jLabel2.setText("Password:");
-        login.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, -1, -1));
-
-        txt_username.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_usernameActionPerformed(evt);
-            }
-        });
-        login.add(txt_username, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 190, 190, 40));
-
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel3.setText("Login");
-        login.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 274, 38));
-
-        btn_login.setText("Login");
-        btn_login.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_loginActionPerformed(evt);
-            }
-        });
-        login.add(btn_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 280, 118, 37));
-
-        jLabel4.setText("Not registerd ?");
-        login.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 350, 120, 40));
-
-        btn_register.setText("Register");
-        login.add(btn_register, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 350, 118, 37));
-        login.add(txt_password, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 120, 192, 41));
-
-        maincomponentPane.add(login, "card2");
 
         viewAll.setPreferredSize(new java.awt.Dimension(700, 600));
         viewAll.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -536,6 +486,44 @@ public class hr_home extends javax.swing.JFrame {
 
         maincomponentPane.add(register, "card4");
 
+        login.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        login.setPreferredSize(new java.awt.Dimension(700, 600));
+        login.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setText("User name:");
+        login.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, -1, -1));
+
+        jLabel2.setText("Password:");
+        login.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, -1, -1));
+
+        txt_username.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_usernameActionPerformed(evt);
+            }
+        });
+        login.add(txt_username, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 190, 190, 40));
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel3.setText("Login");
+        login.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 274, 38));
+
+        btn_login.setText("Login");
+        btn_login.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_loginActionPerformed(evt);
+            }
+        });
+        login.add(btn_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 280, 118, 37));
+
+        jLabel4.setText("Not registerd ?");
+        login.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 350, 120, 40));
+
+        btn_register.setText("Register");
+        login.add(btn_register, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 350, 118, 37));
+        login.add(txt_password, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 120, 192, 41));
+
+        maincomponentPane.add(login, "card2");
+
         javax.swing.GroupLayout indexLayout = new javax.swing.GroupLayout(index);
         index.setLayout(indexLayout);
         indexLayout.setHorizontalGroup(
@@ -545,9 +533,9 @@ public class hr_home extends javax.swing.JFrame {
                 .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 568, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(indexLayout.createSequentialGroup()
-                .addGap(30, 30, 30)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(menuPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addComponent(maincomponentPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -558,12 +546,13 @@ public class hr_home extends javax.swing.JFrame {
                 .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(indexLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(indexLayout.createSequentialGroup()
-                        .addGap(86, 86, 86)
-                        .addComponent(maincomponentPane, javax.swing.GroupLayout.PREFERRED_SIZE, 786, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(maincomponentPane, javax.swing.GroupLayout.PREFERRED_SIZE, 786, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())
                     .addGroup(indexLayout.createSequentialGroup()
-                        .addGap(57, 57, 57)
-                        .addComponent(menuPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
+                        .addGap(18, 18, 18)
+                        .addComponent(menuPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
         getContentPane().add(index, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -808,8 +797,6 @@ public class hr_home extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_action_login;
     private javax.swing.JButton btn_action_register;
-    private javax.swing.JButton btn_action_register2;
-    private javax.swing.JButton btn_action_register3;
     private javax.swing.JButton btn_action_veiwAll;
     private javax.swing.JButton btn_delete;
     private javax.swing.JButton btn_login;
