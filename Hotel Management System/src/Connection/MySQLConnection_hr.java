@@ -3,14 +3,15 @@ package Connection;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
-public class MySQLConnection {
+public class MySQLConnection_hr {
+	
 	
 	public static Connection createConnection(){
 		Connection conn = null;
 		
 		try{
 			Class.forName("com.mysql.jdbc.Driver");
-			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/hotel_system","root","mh123");
+			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/csse_hotel_managment","root","");
 			
 			if(conn != null){
 				System.out.println("Connection Successful");
@@ -19,7 +20,10 @@ public class MySQLConnection {
 		catch (Exception e) {
 			e.printStackTrace();
 			System.out.println("Connection UnSuccessful !!");
-		}	
+		}
+		
 		return conn;
-	}	
+	}
+	
+	
 }
